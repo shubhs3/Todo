@@ -2,7 +2,7 @@ showtask(0);
 var inputBox = document.getElementById("input-box");
 var addBtn = document.getElementById("add-btn");
 addBtn.addEventListener("click", addTask);
-
+var taskObj = [];
 function addTask() {
 	var inputBoxVal = inputBox.value.trim();
 	if (inputBoxVal == "") {
@@ -31,7 +31,6 @@ function addTask() {
 function showtask(type) {
 	let localTask = localStorage.getItem("tasks");
 	let addedtasklist = document.getElementById("task-list");
-
 	if (localTask == null) {
 		taskObj = [];
 	} else {
